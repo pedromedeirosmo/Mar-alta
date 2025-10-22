@@ -22,11 +22,10 @@ main {
 }
 
 header {
+  border-bottom: 3px solid #ff6b35;
   text-align: center;
-  padding: 20px 0;
   background-color: #3a00ac; /* Roxo */
   color: white;
-  margin-bottom: 30px;
 }
 
 .cardapio {
@@ -39,7 +38,7 @@ header {
 }
 
 .hamburguer-card {
-  background: white;
+  background: #fff5e6;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 280px;
@@ -69,31 +68,49 @@ header {
 .hamburguer-card p {
   font-size: 14px;
   margin-bottom: 15px;
-  color: #555;
+  color: #333;
   min-height: 40px;
 }
 
 .preco {
   font-weight: bold;
   font-size: 18px;
-  color: #333;
+  color: #ff6b35;
 }
 
 footer {
+  border-top: 3px solid #ff6b35;
   text-align: center;
-  padding: 15px;
-  margin-top: 40px;
   font-size: 14px;
+  margin-top: 20px;
   color: white;
   background-color: #3a00ac; /* Roxo */
 }
 
-@media (max-width: 600px) {
-  .cardapio {
-    flex-direction: column;
-    align-items: center;
-  }
+footer svg {
+  vertical-align: middle;
+  fill: #ff6b35; /* cor laranja nos ícones */
 }
+footer a {
+  color: #fff; /* Cor branca padrão */
+  text-decoration: none; /* Remove o sublinhado */
+  margin: 0 8px; /* Espaçamento entre os links */
+  display: inline-flex; /* Para alinhar ícone + texto */
+  align-items: center; /* Alinha verticalmente */
+}
+footer a:hover {
+  color: #ff6b35; /* Laranja ao passar o mouse */
+}
+
+footer a svg {
+  fill: #fff; /* ícones de redes sociais brancos */
+  margin-right: 4px;
+}
+
+footer a:hover svg {
+  fill: #ff6b35;
+}
+
 .logo {
   width: 200px;
   height: auto;
@@ -101,7 +118,80 @@ footer {
 }
 
 .titulo-cardapio {
+  color: #ff6b35;
   text-align: center;
-  font-size: 32px;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+
+#bebidas {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#bebidas h2 {
+  color: #ff6b35; /* título laranja */
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+
+.cards-bebidas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card-bebida {
+  background: #fff5e6;
+  border-radius: 12px;
+  padding: 16px;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-bebida:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-bebida h3 {
+  color: #ff6b35; /* título laranja */
+  margin-bottom: 8px;
+}
+
+.card-bebida p {
+  color: #333;
+  margin: 4px 0;
+}
+
+.card-bebida .preco {
+  font-weight: bold;
+  color: #ff6b35;
+  margin-top: 8px;
+}
+
+.card-bebida button,
+.hamburguer-card button {
+  background: #ff6b35;
+  color: #fff5e6;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background 0.3s ease;
+}
+
+.card-bebida button:hover,
+.hamburguer-card button:hover {
+  background: #b84a25; /* laranja mais escuro no hover */
+}
+
+@media (max-width: 600px) {
+  .cardapio {
+    flex-direction: column;
+    align-items: center;
+  }
 }
