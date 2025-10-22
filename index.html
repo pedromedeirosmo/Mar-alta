@@ -1,134 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <link rel="stylesheet" href="estilo.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Cardápio Maré Alta</title>
-    <style>
-      body {
-        font-family: "Arial", sans-serif;
-        background-color: #f7f7f7;
-        margin: 0;
-        padding: 20px;
-        color: #333;
-      }
-
-      header {
-        text-align: center;
-        padding: 20px 0;
-        background-color: #6a1b9a; /* Roxo */
-        color: white;
-        border-radius: 8px;
-        margin-bottom: 30px;
-      }
-
-      h1 {
-        margin: 0;
-        color: #ff6d00; /* Laranja */
-      }
-
-      .cardapio {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-        max-width: 1000px;
-        margin: 0 auto;
-      }
-
-      .hamburguer-card {
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        width: 280px;
-        padding: 15px;
-        text-align: center;
-        transition: transform 0.2s ease;
-      }
-
-      .hamburguer-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-      }
-
-      .hamburguer-card img {
-        width: 100%;
-        border-radius: 10px;
-        object-fit: cover;
-        height: 180px;
-        margin-bottom: 15px;
-      }
-
-      .hamburguer-card h3 {
-        margin: 0 0 10px;
-        color: #ff6d00; /* Laranja */
-      }
-
-      .hamburguer-card p {
-        font-size: 14px;
-        margin-bottom: 15px;
-        color: #555;
-        min-height: 40px;
-      }
-
-      .preco {
-        font-weight: bold;
-        font-size: 18px;
-        color: #333;
-      }
-
-      footer {
-        text-align: center;
-        padding: 15px;
-        margin-top: 40px;
-        font-size: 14px;
-        color: white;
-        background-color: #6a1b9a; /* Roxo */
-        border-radius: 8px;
-      }
-
-      @media (max-width: 600px) {
-        .cardapio {
-          flex-direction: column;
-          align-items: center;
-        }
-      }
-    </style>
+    <style></style>
   </head>
   <body>
     <header>
-      <h1>Maré Alta</h1>
-      <p>Confira nosso cardápio delicioso!</p>
+      <img src="img/logo.jpg" alt="Logo Maré Alta" class="logo" />
     </header>
 
     <main>
+      <h2 class="titulo-cardapio">Confira nosso Cardápio</h2>
+
       <section class="cardapio">
         <article class="hamburguer-card">
           <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=400&q=80" alt="Hambúrguer Clássico" />
-          <h3>Hambúrguer Clássico</h3>
-          <p>Carne bovina suculenta, queijo cheddar, alface, tomate e molho especial.</p>
-          <div class="preco">R$ 25,00</div>
+          <h3>Prova Final Suprema</h3>
+          <p>Pão, hambúrguer, calabresa, ovo frito, bacon, queijo, alface, tomate, maionese, sal e pimenta</p>
+          <div class="preco">R$ 48,00</div>
         </article>
 
         <article class="hamburguer-card">
           <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=400&q=80" alt="Hambúrguer Bacon" />
-          <h3>Hambúrguer Bacon</h3>
-          <p>Carne bovina, queijo, bacon crocante, cebola caramelizada e maionese da casa.</p>
-          <div class="preco">R$ 30,00</div>
+          <h3>O Aluno Nota 10</h3>
+          <p>Pão, hambúrguer bovino 80-100g, queijo, alface, tomate, maionese, sal e pimenta</p>
+          <div class="preco">R$ 27,00</div>
         </article>
 
         <article class="hamburguer-card">
           <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80" alt="Hambúrguer Veggie" />
-          <h3>Hambúrguer Veggie</h3>
-          <p>Burger de grão-de-bico, alface, tomate, cebola roxa e molho tahine.</p>
-          <div class="preco">R$ 28,00</div>
-        </article>
-
-        <article class="hamburguer-card">
-          <img src="https://i.pinimg.com/736x/a2/5d/b1/a25db145a1ec08e1db73c0afed6a3cf1.jpg" alt="Hambúrguer Duplo" />
-          <h3>Hambúrguer Duplo</h3>
-          <p>Dois burgers bovinos, queijo cheddar, bacon, alface, tomate e maionese especial.</p>
-          <div class="preco">R$ 35,00</div>
+          <h3>Aulas Extras</h3>
+          <p>Pão, hambúrguer, queijo, ovo frito, presunto, alface, tomate, maionese, sal e pimenta</p>
+          <div class="preco">R$ 33,00</div>
         </article>
       </section>
     </main>

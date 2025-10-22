@@ -1,0 +1,112 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #3a00ac; /* Roxo */
+  color: white;
+  margin-bottom: 30px;
+}
+
+h1 {
+  margin: 0;
+  color: #ff6d00; /* Laranja */
+}
+
+.cardapio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hamburguer-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.hamburguer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.hamburguer-card img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  height: 180px;
+  margin-bottom: 15px;
+}
+
+.hamburguer-card h3 {
+  margin: 0 0 10px;
+  color: #ff6d00; /* Laranja */
+}
+
+.hamburguer-card p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #555;
+  min-height: 40px;
+}
+
+.preco {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 14px;
+  color: white;
+  background-color: #3a00ac; /* Roxo */
+}
+
+@media (max-width: 600px) {
+  .cardapio {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.titulo-cardapio {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
