@@ -1,62 +1,137 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Teste</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cardápio Hamburgueria</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f2f5;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f7f7f7;
+        margin: 0;
+        padding: 20px;
+        color: #333;
+      }
 
-        header {
-            background-color: #007acc;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+      header {
+        text-align: center;
+        padding: 20px 0;
+        background-color: #ff5722;
+        color: white;
+        border-radius: 8px;
+        margin-bottom: 30px;
+      }
 
-        main {
-            padding: 20px;
-        }
+      h1 {
+        margin: 0;
+      }
 
-        section {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.05);
-            max-width: 600px;
-            margin: 20px auto;
-        }
+      .cardapio {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
 
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #eee;
+      .hamburguer-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 280px;
+        padding: 15px;
+        text-align: center;
+        transition: transform 0.2s ease;
+      }
+
+      .hamburguer-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      }
+
+      .hamburguer-card img {
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+        height: 180px;
+        margin-bottom: 15px;
+      }
+
+      .hamburguer-card h3 {
+        margin: 0 0 10px;
+        color: #ff5722;
+      }
+
+      .hamburguer-card p {
+        font-size: 14px;
+        margin-bottom: 15px;
+        color: #555;
+        min-height: 40px;
+      }
+
+      .preco {
+        font-weight: bold;
+        font-size: 18px;
+        color: #333;
+      }
+
+      footer {
+        text-align: center;
+        padding: 15px;
+        margin-top: 40px;
+        font-size: 14px;
+        color: #888;
+      }
+
+      @media (max-width: 600px) {
+        .cardapio {
+          flex-direction: column;
+          align-items: center;
         }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Página de Teste</h1>
-        <p>Este é um exemplo simples de site em HTML.</p>
+      <h1>Hamburgueria do Chef</h1>
+      <p>Confira nosso cardápio delicioso!</p>
     </header>
 
     <main>
-        <section>
-            <h2>Bem-vindo!</h2>
-            <p>Essa página foi criada apenas para fins de teste.</p>
-            <p>Você pode modificar este conteúdo à vontade.</p>
-        </section>
+      <section class="cardapio">
+        <article class="hamburguer-card">
+          <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=400&q=80" alt="Hambúrguer Clássico" />
+          <h3>Hambúrguer Clássico</h3>
+          <p>Carne bovina suculenta, queijo cheddar, alface, tomate e molho especial.</p>
+          <div class="preco">R$ 25,00</div>
+        </article>
+
+        <article class="hamburguer-card">
+          <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=400&q=80" alt="Hambúrguer Bacon" />
+          <h3>Hambúrguer Bacon</h3>
+          <p>Carne bovina, queijo, bacon crocante, cebola caramelizada e maionese da casa.</p>
+          <div class="preco">R$ 30,00</div>
+        </article>
+
+        <article class="hamburguer-card">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80" alt="Hambúrguer Veggie" />
+          <h3>Hambúrguer Veggie</h3>
+          <p>Burger de grão-de-bico, alface, tomate, cebola roxa e molho tahine.</p>
+          <div class="preco">R$ 28,00</div>
+        </article>
+
+        <article class="hamburguer-card">
+          <img src="https://images.unsplash.com/photo-1601050690721-2d4e5228e06e?auto=format&fit=crop&w=400&q=80" alt="Hambúrguer Duplo" />
+          <h3>Hambúrguer Duplo</h3>
+          <p>Dois burgers bovinos, queijo cheddar, bacon, alface, tomate e maionese especial.</p>
+          <div class="preco">R$ 35,00</div>
+        </article>
+      </section>
     </main>
 
     <footer>
-        <p>Feito por Você - 2025</p>
+      <p>Hamburgueria do Chef © 2025</p>
     </footer>
-</body>
+  </body>
 </html>
-s
