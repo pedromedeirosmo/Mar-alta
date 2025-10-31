@@ -93,7 +93,6 @@ footer svg {
 }
 footer a {
   color: #fff; /* Cor branca padrão */
-  text-decoration: none; /* Remove o sublinhado */
   margin: 0 8px; /* Espaçamento entre os links */
   display: inline-flex; /* Para alinhar ícone + texto */
   align-items: center; /* Alinha verticalmente */
@@ -189,9 +188,65 @@ footer a:hover svg {
   background: #b84a25; /* laranja mais escuro no hover */
 }
 
-@media (max-width: 600px) {
+.btn-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff6b35;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 50px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 999;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.btn-whatsapp:hover {
+  background-color: #e65a2c;
+  transform: scale(1.05);
+}
+
+.btn-whatsapp {
+  touch-action: pan-y; /* Permite arrastar horizontal no celular */
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.btn-whatsapp.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.whatsapp-icon {
+  display: none;
+  fill: white;
+}
+
+@media (max-width: 675px) {
   .cardapio {
     flex-direction: column;
     align-items: center;
+  }
+
+  .btn-whatsapp {
+    padding: 5px;
+    border-radius: 50%; /* vira bolinha */
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+  }
+
+  .btn-whatsapp span {
+    display: none; /* Texto some no celular */
+  }
+
+  .whatsapp-icon {
+    display: block; /* Ícone aparece no celular */
+    width: 28px;
+    height: 28px;
   }
 }
